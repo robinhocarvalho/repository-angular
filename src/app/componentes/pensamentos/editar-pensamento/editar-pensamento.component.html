@@ -2,17 +2,17 @@
   <header class="header">
     <h2>Adicione um <br>pensamento novo:</h2>
   </header>
-  <form [formGroup]="formulario" *ngIf="formulario">
+  <form [formGroup]="formulario">
     <label for="pensamento">Pensamento</label>
     <input
-      type="textarea"
+      type="text"
       class="input"
       id="pensamento"
       formControlName="conteudo"
       placeholder="Digite o pensamento"
     >
     <div class="mensagem__erro" *ngIf="formulario.get('conteudo')?.errors && formulario.get('conteudo')?.touched">
-      O campo "Pensamento" é obrigatório!
+      Pensamento é obrigatório!
     </div>
     <label for="autoria">Autoria ou fonte</label>
     <input
@@ -24,11 +24,11 @@
     >
     <div class="mensagem__erro"
       *ngIf="formulario.get('autoria')?.errors?.['required'] && formulario.get('autoria')?.touched">
-        O Campo "Autoria" é obrigatória!
+        Autoria é obrigatória!
     </div>
     <div class="mensagem__erro"
       *ngIf="formulario.get('autoria')?.errors?.['minlength'] && formulario.get('autoria')?.touched">
-        O campo "Autoria" precisa ter no mínimo 3 caracteres!
+        Autoria precisa ter no mínimo 3 caracteres!
     </div>
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
@@ -106,3 +106,4 @@
     </div>
   </form>
 </section>
+

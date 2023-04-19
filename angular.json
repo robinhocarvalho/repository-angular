@@ -5,11 +5,7 @@
   "projects": {
     "memoteca": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -103,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "002ea7bc-e8cd-40a5-92c3-4492597e708c"
+    "analytics": "9b29af59-c72b-4885-a9fe-d563a548aef2"
   }
 }
